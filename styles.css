@@ -1,0 +1,131 @@
+/* Resetear margenes y padding para todo el documento */
+body, h1, h2, h3, p, img, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo general del cuerpo */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Estilo del encabezado */
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+}
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px;
+    margin: 0;
+}
+
+.card {
+    width: calc(25% - 20px); /* Ajusta según la cantidad de tarjetas por fila */
+    max-width: 300px;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+
+.card .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0; /* Asegura que el pie ocupe todo el ancho */
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    text-align: center; /* Alinea el texto al centro horizontal */
+    opacity: 0.9;
+    transition: opacity 0.2s ease;
+    border-radius: 0 0 10px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card:hover .caption {
+    opacity: 1;
+}
+
+@media (max-width: 1200px) {
+    .card {
+        width: calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 800px) {
+    .card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: calc(100% - 20px);
+    }
+}
+/* Estilo del pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact p {
+    margin: 0;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.social-icon {
+    margin: 0 10px;
+}
+
+.social img {
+    width: 60px;
+    height: 60px;
+}
+/* Otros estilos adicionales según sea necesario */
